@@ -1,0 +1,112 @@
+/* Import Google Fonts for advanced typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Base styling with elegant font and smooth gradient */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.75;
+    color: #282828;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    margin: 0;
+    padding: 20px;
+    transition: background 0.5s ease;
+}
+
+/* Header styling with a dramatic color-changing gradient */
+header {
+    padding: 30px 20px;
+    background: linear-gradient(120deg, #12c2e9, #c471ed, #f64f59);
+    color: white;
+    text-align: center;
+    background-size: 600% 600%;
+    animation: GradientFlow 30s ease infinite;
+}
+
+/* Main title effects with shadow for depth */
+header h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Sticky navbar with reflective styling */
+nav {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid transparent;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    font-weight: 500;
+    font-size: 20px;
+    color: #282828;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin: 0 5px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+nav ul li a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Footer with lively gradient and contrast text */
+footer {
+    padding: 20px;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+/* Content boxes with more personality */
+.box {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.05);
+    background-color: #f0f0f0;
+}
+
+/* Infinite background gradient animation */
+@keyframes GradientFlow {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
+}
+
+/* Responsive adjustments for better accessibility on smaller devices */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    .box {
+        padding: 20px;
+    }
+}
